@@ -4,6 +4,8 @@ import StyledInput from '../components/styled-input';
 import React from 'react';
 import StyledButton from '../components/styled-button';
 import { router } from 'expo-router';
+import{ Button, ButtonText } from '@/components/ui/button'
+
 
 export default function Login() {
 
@@ -22,11 +24,9 @@ export default function Login() {
       <StyledInput placeholder='Digite seu Senha' 
       onChangeText={() => console.log('foi')}/>
       <StatusBar style="auto" />
-      <StyledButton 
-      text='Entrar'
-      onClick={handleLogin}
-      color='blue'
-      />
+      <Button size='md' variant='solid' onPress={handleLogin} className='bg-green-500 text-bold'>
+        <ButtonText>Login</ButtonText>
+      </Button>
       <StatusBar style="auto" />
     </View>
   );
